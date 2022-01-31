@@ -15,14 +15,13 @@ http://192.168.1.3/5000
 Une page d'accueil s'affichera alors
 # Fonctionnalités
 ## Uploader un pdf
-Trois solutions :
 ### Solution Manuelle 
 Cliquer sur parcourir, choisir un fichier .pdf et cliquer sur upload
 ### Solution Navigateur Web
 Exécuter la recherche http://192.168.1.3/5000/<nom_du_fichier_a_uploader>
 ### Solution ligne de commande
 Exécuter dans un terminal : curl http://192.168.1.3/5000/<nom_du_fichier_a_uploader>
-## Afficher les pdf présent sur le serveur
+## Afficher les pdf présents sur le serveur
 ### Solution Navigateur web 
 Exécuter la recherche http://192.168.1.3/5000/afficher
 ### Solution Ligne de commande
