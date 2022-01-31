@@ -11,14 +11,14 @@ python3 -m main.py
 L'application est maintenant lancée et en écoute sur le port 5000 à l'adresse 192.168.1.30
 # Description de l'application
 Pour utiliser cette application, utiliser un navigateur web et inscrire :
-http://192.168.1.30:5000
+http://192.168.1.30:5000/
 Une page d'accueil s'affichera alors
 # Fonctionnalités
 ## Uploader un pdf
 ### Solution Manuelle 
 Cliquer sur parcourir, choisir un fichier .pdf et cliquer sur upload
 ### Solution Navigateur Web
-Exécuter la recherche http://192.168.1.30/5000/<nom_du_fichier_a_uploader>
+Exécuter la recherche http://192.168.1.30:5000/<nom_du_fichier_a_uploader>
 ### Solution ligne de commande
 Exécuter dans un terminal : curl http://192.168.1.30:5000/<nom_du_fichier_a_uploader>
 ## Afficher les pdf présents sur le serveur
