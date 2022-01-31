@@ -11,7 +11,7 @@ python3 -m main.py
 L'application est maintenant lancée et en écoute sur le port 5000 à l'adresse 192.168.1.30
 # Description de l'application
 Pour utiliser cette application, utiliser un navigateur web et inscrire :
-http://192.168.1.30/5000
+http://192.168.1.30:5000
 Une page d'accueil s'affichera alors
 # Fonctionnalités
 ## Uploader un pdf
@@ -28,9 +28,9 @@ Exécuter la recherche http://192.168.1.30:5000/afficher
 curl http://192.168.1.30:5000/afficher
 ## Afficher les métadonnées d'un pdf
 ### Solution Navigateur web
-Exécuter la recherche http://192.168.1.30/5000/meta/<nom de mon .pdf>
+Exécuter la recherche http://192.168.1.30:5000/meta/<nom de mon .pdf>
 ### Solution Ligne de commande
-curl http://192.168.1.30/5000/meta/<nom de mon .pdf>
+curl http://192.168.1.30:5000/meta/<nom de mon .pdf>
 # Lancement du script de test
 Exécuter la commande suivante dans le terminal :
 python3 test.py
