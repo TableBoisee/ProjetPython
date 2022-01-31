@@ -1,3 +1,6 @@
+### Création d'un serveur de gestion de .pdf basé sur Flask ###
+
+#Importation des librairies
 import os
 from flask import Flask, jsonify, request, redirect, flash
 from flask import render_template
@@ -21,7 +24,7 @@ url = "http://192.168.1.30:5000/"
 def allowed_file(filename):
     return "." in filename and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS
 
-
+### Route pour uploader un fichier
 @app.route("/", methods=["GET", "POST"])
 def upload_file():
     if request.method == "POST":
@@ -42,7 +45,7 @@ def upload_file():
     return render_template("homepage.html")
 
 
-## Bien penser à nommer le dossier templates
+### Route pour afficher l'ensemble des .pdf uploadé
 @app.route("/afficher")
 def homepage():
     files = os.listdir(app.config["UPLOAD_FOLDER"])
@@ -50,7 +53,7 @@ def homepage():
     return jsonify(dico)
 
 
-# Récupérer une variable dans la requête
+### Route pour afficher les métadonnées d'un pdf du dossier upload
 @app.route("/meta/<nom_pdf>")
 def variable(nom_pdf):
     chemin = os.path.join(app.config["UPLOAD_FOLDER"], nom_pdf)
@@ -71,7 +74,7 @@ def variable(nom_pdf):
     return jsonify(dico)
 
 
-# Récupérer une variable dans la requête
+### Route pour effacer un .pdf
 @app.route("/delete/<nom_pdf>")
 def delete(nom_pdf):
     try:
